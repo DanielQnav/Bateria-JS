@@ -1,4 +1,4 @@
-window.addEventListener('keydown', playSound);
+window.addEventListener('keyup', playSound);
 
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
@@ -6,7 +6,7 @@ function playSound(e) {
   if (!audio) return;
   audio.currentTime = 0;
   audio.play();
-  key.classList.add('playing');
+  key.classList.add('playing');a
 }
 function removeTransition(e) {
   if (e.propertyName !== 'box-shadow') return;
